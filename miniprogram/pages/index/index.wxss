@@ -1,0 +1,167 @@
+/**index.wxss**/
+
+page {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+.InfoBtn {
+    position: fixed;
+    top: 60%;
+    left: 275rpx;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(red, #ff4d00, #f90, #ffe600, #cf0, #80ff00, #3f0, #00ff1a, #0f6, #c0f, #ff00e6, #f09, #ff004d, red);
+    border-radius: 50%;
+    font-size: 32rpx;
+}
+
+.helpBtn {
+    position: fixed;
+    bottom: 0;
+    line-height: 100rpx;
+    margin: auto;
+    width: 750rpx;
+    height: 100rpx;
+    font-size: 32rpx;
+}
+
+.userAvatar {
+    position: absolute;
+    top: 375rpx;
+    right: 30rpx;
+    width: 150rpx;
+    height: 150rpx;
+    z-index: 20;
+}
+
+.username {
+    position: relative;
+    bottom: 135rpx;
+    right: 120rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #fff;
+}
+
+.userBGI {
+    position: absolute;
+    top: 0rpx;
+    left: 0rpx;
+    right: 0rpx;
+    height: 500rpx;
+    width: 750rpx;
+    background-color: rgba(138, 136, 136, 0.356);
+    -webkit-overflow-scrolling: contain;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0rpx;
+    left: 0rpx;
+    right: 0rpx;
+    padding: 10rpx 10rpx;
+    z-index: 30;
+    background-color: #fff;
+}
+
+.form-content {
+    flex: 5;
+    border: 1rpx solid rgb(167, 167, 167);
+    height: 62rpx;
+}
+
+.form-image-btn {
+    flex: 1;
+    font-size: 28rpx;
+    height: 66rpx;
+}
+
+.form-btn {
+    flex: 1;
+    font-size: 28rpx;
+    height: 66rpx;
+}
+.form-btn-help{
+    flex: 1;
+    font-size: 28rpx;
+    height: 66rpx;
+}
+.itemContainer {
+    margin-top: 500rpx;
+    height: 100%;
+}
+
+.item {
+    width: 100%;
+    padding: 30rpx 10rpx;
+    border-bottom: 1rpx rgb(167, 167, 167) solid;
+}
+
+.nickname {
+    margin-left: 20rpx;
+    font-size: 32rpx;
+    position: relative;
+    bottom: 48rpx;
+    color: rgb(0, 88, 177);
+}
+
+.content {
+    margin: 0rpx 100rpx;
+    margin-top: -48rpx;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.itemImage {
+    margin: 10rpx 100rpx;
+    width: 550rpx;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 30rpx;
+    left: 100rpx;
+}
+
+.time {
+    font-size: 28rpx;
+    flex: 2;
+}
+
+.menu {
+    font-size: 28rpx;
+    flex: 1;
+    color: rgb(0, 88, 177);
+}
+
+.menubar {
+    flex: 1;
+    font-size: 28rpx;
+    display: flex;
+    color: rgb(0, 88, 177);
+}
+
+.menubar > text {
+    flex: 1;
+    color: rgb(0, 88, 177);
+}
+
+.like {
+    width: 550rpx;
+    margin: 30rpx 100rpx;
+    background-color: rgb(216, 216, 216);
+    color: rgb(0, 88, 177);
+}

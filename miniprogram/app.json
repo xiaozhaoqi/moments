@@ -1,0 +1,15 @@
+{
+    "cloud": true,
+    "pages": [
+        "pages/index/index",
+        "pages/self/self",
+        "pages/help/help"
+    ],
+    "window": {
+        "backgroundColor": "#fff",
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "朋友圈",
+        "navigationBarTextStyle": "black"
+    }
+}

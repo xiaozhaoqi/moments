@@ -1,0 +1,29 @@
+<!--miniprogram/pages/self/self.wxml-->
+<view class="container">
+    <view class='userAvatar' bindtap='clickAvatar'>
+        <open-data type='userAvatarUrl'></open-data>
+        <open-data type='userNickName' class='username'></open-data>
+    </view>
+    <view class='line'></view>
+    <image src='{{bgiURL}}' class='userBGI' bindtap='clickBGI' mode='scaleToFill'></image>
+    <scroll-view class='itemContainer' enable-back-to-top='true' scroll-y='true' >
+        <view wx:key="{{1}}" wx:for="{{stateList}}" class='item'>
+            <image style="width: 80rpx; height: 80rpx;" src="{{item.user_avatar}}"></image>
+            <text class='nickname'>{{item.user_nickName}}</text>
+            <view class='content'>{{item.content}}</view>
+            <image class='itemImage' src='{{item.image}}' mode='widthFix' wx:if='{{item.image}}'></image>
+            <view class='bottom'>
+                <text class='time'>{{item.time}}</text>
+                <view wx:if='{{showMenu[index]==true}}' class='menubar'>
+                    <text bindtap='clickLike' data-index='{{index}}'>赞</text>
+                    <text>评论</text>
+                </view>
+                <view class='menu'>
+                    <text data-index='{{index}}' bindtap='clickmenu' color='rgb(0, 88, 177)' wx:if='{{showMenu[index]==false}}'>···</text>
+                    <icon data-index='{{index}}' bindtap='clickmenu' type='clear' size='14' wx:if='{{showMenu[index]==true}}'></icon>
+                </view>
+            </view>
+            <view class='like'><text wx:if='{{item.like}}'> ♥ </text>{{item.like}}</view>
+        </view>
+    </scroll-view>
+</view>

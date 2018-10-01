@@ -1,0 +1,7 @@
+/* miniprogram/pages/help/help.wxss */
+view{
+    text-align: center;
+}
+view > view{
+    text-align: left;
+}

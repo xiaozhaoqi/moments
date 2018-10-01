@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<button open-type='getUserInfo' bindgetuserinfo='clickGetInfo' class='InfoBtn' wx:if="{{info==false}}"></button>
+<button class='helpBtn' wx:if="{{info==false}}" bindtap='clickHelp'>帮助与说明文档</button>
+
+<view class="container" wx:if="{{info==true}}">
+    <view class='userAvatar' bindtap='clickAvatar'>
+        <open-data type='userAvatarUrl'></open-data>
+        <open-data type='userNickName' class='username'></open-data>
+    </view>
+    <view class='line'></view>
+    <image src='{{bgiURL}}' class='userBGI' bindtap='clickBGI' mode='scaleToFill'></image>
+    <view class='input-area'>
+        <button class='form-btn-help' bindtap='clickHelp'>帮助</button>
+        <input type='text' class='form-content' placeholder=' 说点什么吧' placeholder-style='font-size:28rpx;' bindinput='inputOnChange' value='{{text}}'></input>
+        <button class='form-image-btn' bindtap='chooseImage'>配图</button>
+        <button bindtap='clickme' class='form-btn' disabled='{{submitDisabled}}'>发表</button>
+    </view>
+    <scroll-view class='itemContainer' enable-back-to-top='true' scroll-y='true'>
+        <view wx:key="{{1}}" wx:for="{{stateList}}" class='item'>
+            <image style="width: 80rpx; height: 80rpx;" src="{{item.user_avatar}}" data-nickname='{{item.user_nickName}}' bindtap='clickAvatar'></image>
+            <text class='nickname' data-nickname='{{item.user_nickName}}' bindtap='clickAvatar'>{{item.user_nickName}}</text>
+            <view class='content'>{{item.content}}</view>
+            <image class='itemImage' src='{{item.image}}' mode='widthFix' wx:if='{{item.image}}'></image>
+            <view class='bottom'>
+                <text class='time'>{{item.time}}</text>
+                <view wx:if='{{showMenu[index]==true}}' class='menubar'>
+                    <text bindtap='clickLike' data-index='{{index}}'>赞</text>
+                    <text>评论</text>
+                </view>
+                <view class='menu'>
+                    <text data-index='{{index}}' bindtap='clickmenu' color='rgb(0, 88, 177)' wx:if='{{showMenu[index]==false}}'>···</text>
+                    <icon data-index='{{index}}' bindtap='clickmenu' type='clear' size='14' wx:if='{{showMenu[index]==true}}'></icon>
+                </view>
+            </view>
+            <view class='like'>
+                <text wx:if='{{item.like}}'> ♥ </text>{{item.like}}</view>
+        </view>
+    </scroll-view>
+    <!-- <view class='comment'>{{item.comment}}</view> -->
+</view>

@@ -1,0 +1,13 @@
+<!--miniprogram/pages/help/help.wxml-->
+<view>帮助文档</view>
+<view>
+    <view>· 点击头像可进入该用户的个人相册</view>
+    <view>· 点击相册封面可设置图片背景</view>
+    <view>· 首页底部可编辑和发送动态</view>
+    <view>· 每条动态可包含一段文字和最多一张图片</view>
+    <view>· 暂不支持分组可见功能</view>
+</view>
+<view>特殊说明</view>
+<view>
+    <view>· 小程序云数据库安全策略限制，一条记录只能由该记录的创建者（即openid一致）进行写/改操作，点赞只能给自己点：) 评论同理</view>
+</view>
